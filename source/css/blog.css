@@ -166,6 +166,24 @@ h6, .h6 {
     margin-top: 50px;
 }
 
+/* tags & categories */
+.blog-tags-container, .blog-categories-container {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.blog-tags-container span.glyphicon, .blog-categories-container span.glyphicon {
+    margin-right: 20px;
+}
+
+/* archive */
+.blog-archive-title {
+    margin-bottom: 50px;
+}
+.blog-post-title-archive {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
 /*
  * Footer
  */
