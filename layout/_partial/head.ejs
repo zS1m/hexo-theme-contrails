@@ -9,9 +9,9 @@
   <!-- 禁止数字识自动别为电话号码 -->
   <meta name="format-detection" content="telephone=no" />
 
-  <!-- description -->
+  <!-- Description -->
   <meta name="description" content="<%= page.description || config.description || '' %>">
-  <!-- author -->
+  <!-- Author -->
   <meta name="author" content="<%= config.author || 'anonymous' %>">
   <!-- Open Graph -->
   <meta property="og:title" content="<%= page.title || config.title || '' %>" />
@@ -26,11 +26,15 @@
     <%= `${ page.title ? `${ page.title } - ` : '' }${ config.title }${ is_home() && config.subtitle ? ` - ${ config.subtitle }` : '' }` %>
   </title>
 
+  <!-- Icon https://iconpark.oceanengine.com/ -->
+  <% if (theme.nav_style === 'icon' ) { %>
+    <script src="<%= theme.nav_style_src %>"></script>
+  <% } %>
   <!-- Bootstrap core CSS -->
   <%- css('bootstrap/css/bootstrap.min.css') %>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <%- css('css/ie10-viewport-bug-workaround.css') %>
 
-  <!-- custom styles -->
+  <!-- Custom styles -->
   <%- css(['css/blog.css', 'css/style.css']) %>
 </head>

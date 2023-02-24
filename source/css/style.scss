@@ -1,0 +1,39 @@
+// 导航栏
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(255, 255, 255, 0.7);
+  // 饱和度及模糊
+  backdrop-filter: saturate(1.8) blur(18px);
+  .nav-bar__nav {
+    display: flex;
+    height: 54px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      text-decoration: none;
+    }
+    a:hover {
+      background: rgba(225, 225, 225, 0.2);
+      border-radius: 3px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-bar__nav__icon {
+      font-size: 18px;
+      color: #222831;
+    }
+  }
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}

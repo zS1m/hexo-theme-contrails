@@ -1,7 +1,21 @@
 # Header
+nav:
+  Archives:
+    href: /archives
+    icon: inbox
+  About:
+    href: /about
+    icon: user
+# icon | text
+nav_style: icon
+nav_style_src: https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_23407_3.e1f4fb8d30cbe72d34c7e0443b651cfd.js
+
 menu:
   Home: /
   Archives: /archives
 
 # Read More text
 excerpt_link: Read More
+
+# i18n
+i18n_dir: :lang
