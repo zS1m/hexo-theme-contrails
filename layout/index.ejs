@@ -1,3 +1,25 @@
+<div>
+  <!-- Banner -->
+  <div class="post-card banner-card">
+    <div class="banner-card__img" style="background-image: url(<%- page.cover || theme.banner %>)">
+      <div class="banner-layer">
+        <div class="banner-layer__avatar">
+          <img src="<%- theme.avatar %>" width="56px" height="56px" alt="avatar">
+        </div>
+        <div class="banner-layer__title">
+          <%= page.title || config.title %>
+        </div>
+        <div class="banner-layer__subtitle">
+          <%= config.description %>
+        </div>
+      </div>
+    </div>
+    <div class="banner-card__social"></div>
+  </div>
+  <!-- Posts -->
+  <div></div>
+</div>
+
 <% page.posts.each(function(item){ %>
   <%- partial('_partial/article-excerpt', {item: item}) %>
 <% }); %>
