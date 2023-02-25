@@ -17,11 +17,12 @@
     <div class="banner-card__social"></div>
   </div>
   <!-- Posts -->
-  <div></div>
+  <div>
+    <% page.posts.each(function(item) { %>
+      <%- partial('_partial/article-excerpt', { item }) %>
+    <% }); %>
+  </div>
 </div>
 
-<% page.posts.each(function(item){ %>
-  <%- partial('_partial/article-excerpt', {item: item}) %>
-<% }); %>
-
+<!-- Pagination -->
 <%- partial('_partial/pagination') %>

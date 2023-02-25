@@ -72,6 +72,58 @@ body {
   }
 }
 
+// 文章卡片
+.blog-post {
+  max-width: 800px;
+  margin: 58px auto 0;
+  // Banner
+  .blog-post__banner {
+    @media screen and (min-width: 1022px) {
+      height: 322px;
+    }
+    @media screen and (max-width: 1022px) {
+      height: 233px;
+    }
+    background-size: cover;
+    background-position: center;
+  }
+  // Expert
+  .blog-post__expert {
+    @media screen and (min-width: 1022px) {
+      padding: 42px 54px 54px 54px;
+      .blog-post__title {
+        font-size: 28px;
+      }
+    }
+    @media screen and (max-width: 1022px) {
+      padding: 28px 32px 32px 32px;
+      .blog-post__title {
+        font-size: 24px;
+      }
+    }
+    // Meta
+    .blog-post__meta {
+      margin: 0 0 20px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #767676;
+    }
+    // Title
+    .blog-post__title a {
+      color: #3D4350;
+    }
+    .blog-post__excerpt {
+      margin: 20px 0;
+      font-size: 16px;
+      color: #767676;
+      line-height: 20px;
+    }
+    .blog-post__category a {
+      margin: 0;
+    }
+  }
+}
+
 
 // Footer
 .blog-footer {

@@ -1,29 +1,26 @@
-<div class="blog-post">
-
-  <!-- Title -->
-  <h2 class="blog-post-title">
-    <a href="<%- url_for(item.path) %>">
-      <%- item.title %>
-    </a>
-  </h2>
-
-  <!-- Date and Author -->
-  <p class="blog-post-meta">
-    <%= item.date.format(config.date_format) %>
-    <% if(item.author) { %>
-      by <%- item.author %>
-    <% } %>
-  </p>
-
-  <!-- Content -->
-  <%- item.excerpt || item.content %>
-
-  <!-- Only display the Read More link if we are displaying an excerpt -->
-  <% if(item.excerpt) { %>
-    <p>
-      <a href="<%- config.root %><%- item.path %>">
-        <%= theme.excerpt_link %>
-      </a>
-    </p>
+<div class="blog-post post-card">
+  <!-- Banner -->
+  <% if (item.banner) { %>
+    <div class="blog-post__banner" data-src="<%- item.banner %>" style="background-image: url(<%- item.banner %>)"></div>
   <% } %>
+
+  <!-- Expert -->
+  <div class="blog-post__expert">
+    <div class="blog-post__meta">
+      <%= item.date.format(config.date_format) %>
+    </div>
+    <div class="blog-post__title">
+      <a href="<%- url_for(item.path) %>"><%- item.title || 'Untitled' %></a>
+    </div>
+    <div class="blog-post__excerpt">
+      <% if (item.excerpt) { %>
+        <%= item.excerpt %>
+      <% } else { %>
+          <%- strip_html(truncate(item.content, { length: theme.expert_len })) %>
+      <% } %>
+    </div>
+    <div class="blog-post__category">
+      <%- list_categories(item.categories, { show_count: false, style: 'none' }) %>
+    </div>
+  </div>
 </div>
