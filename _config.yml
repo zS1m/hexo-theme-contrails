@@ -17,5 +17,9 @@ menu:
 # Read More text
 excerpt_link: Read More
 
+# footer
+footer:
+  start_time: 2022
+
 # i18n
 i18n_dir: :lang
