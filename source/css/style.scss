@@ -39,7 +39,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2), 1px 1px 15px 0 rgb(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
 }
 .banner-card {
@@ -76,6 +76,10 @@ body {
 .blog-post {
   max-width: 800px;
   margin: 58px auto 0;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
+  }
   // Banner
   .blog-post__banner {
     @media screen and (min-width: 1022px) {
@@ -89,6 +93,7 @@ body {
   }
   // Expert
   .blog-post__expert {
+    position: relative;
     @media screen and (min-width: 1022px) {
       padding: 42px 54px 54px 54px;
       .blog-post__title {
@@ -109,7 +114,7 @@ body {
       color: #767676;
     }
     // Title
-    .blog-post__title a {
+    .blog-post__title {
       color: #3D4350;
     }
     .blog-post__excerpt {
@@ -121,6 +126,58 @@ body {
     .blog-post__category a {
       margin: 0;
     }
+    .blog-post__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// Pagination
+.blog-pagination {
+  margin: 58px auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  color: #52596a;
+  & a {
+    color: #52596a;
+  }
+  .blog-pagination__item {
+    position: relative;
+    padding: 32px 120px;
+    background: #fff;
+    text-align: center;
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+    }
+    span {
+      user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+    }
+  }
+  .page-prev, .page-next {
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
+    &:hover {
+      box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+  .page-prev {
+
+  }
+  .page-next {
+
   }
 }
 
