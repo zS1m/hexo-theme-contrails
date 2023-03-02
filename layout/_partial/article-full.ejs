@@ -1,27 +1,46 @@
-<div class="blog-post">
+<div class="post-content">
+  <div class="post-content__left"></div>
+  <div class="post-content__main">
+    <!-- Banner -->
+    <div class="post-card banner-card">
+      <div class="banner-card__img" style="background-image: url(<%- page.cover || theme.banner %>)">
+        <div class="banner-layer">
+          <div class="banner-layer__avatar">
+            <img src="<%- theme.avatar %>" width="56px" height="56px" alt="avatar">
+          </div>
+          <div class="banner-layer__title">
+            <%= page.title || config.title %>
+          </div>
+          <div class="banner-layer__subtitle">
+            <%= `${ page.date.format(config.date_format) } ${ page.author || config.author }` %>
+          </div>
+        </div>
+      </div>
+      <div class="banner-card__social"></div>
+    </div>
+    <!-- Title -->
+    <h2 class="blog-post-title">
+      <a href="<%- config.root %><%- item.path %>">
+        <%- item.title || item.link %>
+      </a>
+    </h2>
 
-  <!-- Title -->
-  <h2 class="blog-post-title">
-    <a href="<%- config.root %><%- item.path %>">
-      <%- item.title || item.link %>
-    </a>
-  </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+      <%= item.date.format(config.date_format) %>
+      <% if(item.author) { %>
+        by <%- item.author %>
+      <% } %>
+    </p>
 
-  <!-- Date and Author -->
-  <p class="blog-post-meta">
-    <%= item.date.format(config.date_format) %>
-    <% if(item.author) { %>
-      by <%- item.author %>
-    <% } %>
-  </p>
+    <!-- Content -->
+    <%- item.content %>
 
-  <!-- Content -->
-  <%- item.content %>
+    <hr />
 
-  <hr />
-
-  <!-- Tags and Categories links -->
-  <%- partial('article-tags', {item: item}) %>
-  <%- partial('article-categories', {item: item}) %>
-
+    <!-- Tags and Categories links -->
+    <%- partial('article-tags', {item: item}) %>
+    <%- partial('article-categories', {item: item}) %>
+  </div>
+  <div class="post-content__right"></div>
 </div>
