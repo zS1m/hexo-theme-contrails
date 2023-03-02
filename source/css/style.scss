@@ -136,6 +136,41 @@ body {
   }
 }
 
+// Main-content
+.post-content {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+  .post-content__main {
+    flex-basis: 800px;
+    flex-shrink: 0;
+    .banner-layer {
+      padding: 96px 64px 64px 96px;
+      background: linear-gradient(rgba(255, 255, 255, 0.73) 14%, rgba(255, 255, 255, 1) 100%);
+      .banner-layer__avatar img {
+        max-height: 64px;
+        max-width: 64px;
+        border-radius: 50%;
+      }
+      .banner-layer__title {
+        margin: 8px 0 0;
+        font-size: 32px;
+        line-height: 48px;
+        color: #222831;
+      }
+      .banner-layer__subtitle {
+        margin: 8px 0 0;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(34, 40, 49, 0.8);
+      }
+    }
+  }
+  .post-content__left, .post-content__right {
+    flex-basis: 240px;
+  }
+}
+
 // Pagination
 .blog-pagination {
   margin: 58px auto;
