@@ -11,8 +11,8 @@ nav_style: icon
 nav_style_src: https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_23407_3.e1f4fb8d30cbe72d34c7e0443b651cfd.js
 
 # Banner
-banner: https://imgur.lzmun.com/picgo/after2022/6DD1FBC3-AD8A-4340-842D-6ACF531F8291_1_105_c.jpeg_itp
-avatar: https://imgur.lzmun.com/picgo/after2022/tripper2colorfull.png_avatar
+banner:
+avatar:
 
 # Post
 expert_len: 120

@@ -144,6 +144,9 @@ body {
   .post-content__main {
     flex-basis: 800px;
     flex-shrink: 0;
+    margin: 116px auto 32px;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
     .banner-layer {
       padding: 96px 64px 64px 96px;
       background: linear-gradient(rgba(255, 255, 255, 0.73) 14%, rgba(255, 255, 255, 1) 100%);
@@ -164,6 +167,15 @@ body {
         line-height: 22px;
         color: rgba(34, 40, 49, 0.8);
       }
+    }
+    // post文章内容区域
+    .post-content__main__article {
+      padding: 16px 32px;
+      background-color: #fff;
+    }
+    .post-content__main__copyright {
+      padding: 16px 32px;
+      background-color: rgba(245, 245, 245, 0.64)
     }
   }
   .post-content__left, .post-content__right {
