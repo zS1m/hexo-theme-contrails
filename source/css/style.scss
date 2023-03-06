@@ -227,9 +227,11 @@ body {
 
 // Footer
 .blog-footer {
-  padding: 40px 0;
+  height: 126px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #999;
-  text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
 }
