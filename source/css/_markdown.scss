@@ -1,0 +1,89 @@
+p {
+  margin: 1em 0;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+/* title */
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.5em 0 0.5em;
+  font-weight: 700;
+}
+h1 {
+  font-size: 1.8em;
+  line-height: 140%;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* text */
+// 块级引用元素
+blockquote {
+  padding: 0 0 0 10px;
+  margin: 1.5em 0;
+  border-left: 2px solid #71afdd;
+  p {
+    color: #767676;
+  }
+  &::before {
+    content: "\201C";
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+}
+// 超链接
+a {
+  color: #222831;
+  text-decoration: underline;
+  text-decoration-color: #71afdd;
+}
+// 预定义格式文本
+pre {
+  margin: 1em 0;
+}
+// 高亮
+mark {
+  background: rgba(113, 175, 221, 0.5);
+}
+
+
+/* list */
+ol {
+  list-style-type: decimal;
+}
+ul {
+  list-style-type: disc;
+}
+ol, ul {
+  margin-left: 1.4em;
+  li {
+    margin: 10px 0;
+    line-height: 1.8rem;
+  }
+}
+
+/* 文字避头尾法则 */
+p, h1, h2, h3, h4, h5, h6 {
+  table-layout: fixed;
+  word-wrap: break-word;
+  word-break: normal;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
