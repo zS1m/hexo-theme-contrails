@@ -1,0 +1,5 @@
+<% if (is_home() || is_page()) { %>
+  <%= config.description %>
+<% } else if (is_post()) { %>
+  <%= `${ page.date.format(config.date_format) } ${ page.author || config.author } ${ __('Updated') }${ page.updated.format(config.date_format) }` %>
+<% } %>

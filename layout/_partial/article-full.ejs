@@ -12,7 +12,7 @@
             <%= page.title || config.title %>
           </div>
           <div class="banner-layer__subtitle">
-            <%= `${ page.date.format(config.date_format) } ${ page.author || config.author } ${ __('Updated') }${ page.updated.format(config.date_format) }` %>
+            <%- partial('_partial/subtitle') %>
           </div>
         </div>
       </div>

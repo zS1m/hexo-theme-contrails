@@ -1,8 +1,9 @@
 # hexo-theme-contrails
 
-🛠 In development, coming soon...
+## 🛠 In development, coming soon...
 
 ## 🌱 TODO
+- [ ] Adapt to mobile terminal
 - [ ] Toc
 - [ ] Music player
 
