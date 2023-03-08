@@ -1,24 +1,14 @@
-<div class="nav-bar">
+<header class="nav-bar">
   <nav class="nav-bar__nav">
-    <!-- Home -->
-    <a href="<%= config.root %>" title="Home">
-      <% if (theme.nav_style === 'icon') { %>
-        <iconpark-icon class="nav-bar__nav__icon" name="home"></iconpark-icon>
-      <%} else if (theme.nav_style === 'text') { %>
-        <span><%- __('Home') %></span>
-      <% } %>
-    </a>
-    <!-- Archive & About -->
-    <% if (page.layout !== 'post') { %>
-      <% for (const i in theme.nav) { %>
-        <a href="<%= theme.nav[i].href %>" title="<%= i %>">
-          <% if (theme.nav_style === 'icon') { %>
-            <iconpark-icon class="nav-bar__nav__icon" name="<%= theme.nav[i].icon %>"></iconpark-icon>
-          <%} else if (theme.nav_style === 'text') { %>
-            <span><%- __(i) %></span>
-          <% } %>
-        </a>
-      <% } %>
+    <!-- Nav buttons -->
+    <% for (const i in theme.nav) { %>
+      <a href="<%- url_for(theme.nav[i].href) %>">
+        <% if (theme.nav_style === 'icon') { %>
+          <iconpark-icon class="nav-bar__nav__icon" name="<%= theme.nav[i].icon %>"></iconpark-icon>
+        <% } else if (theme.nav_style === 'text') { %>
+          <span><%- __(i) %></span>
+        <% } %>
+      </a>
     <% } %>
   </nav>
-</div>
+</header>
