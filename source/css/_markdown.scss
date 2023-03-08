@@ -79,6 +79,13 @@ ol, ul {
   }
 }
 
+/* fancybox image */
+img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
 /* 文字避头尾法则 */
 p, h1, h2, h3, h4, h5, h6 {
   table-layout: fixed;

@@ -21,11 +21,11 @@ $(document).ready(function () {
   $('[data-fancybox="images"]').fancybox({
     buttons : [
       'zoom',
-      "slideShow",
-      "fullScreen",
-      "thumbs",
-      "close"
+      'slideShow',
+      'fullScreen',
+      'thumbs',
+      'close'
     ],
-    animationEffect: "zoom-in-out"
+    animationEffect: 'zoom-in-out'
   })
 })
