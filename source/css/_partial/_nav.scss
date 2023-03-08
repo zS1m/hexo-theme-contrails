@@ -1,0 +1,32 @@
+/* Navigator */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(255, 255, 255, 0.7);
+  // 饱和度及模糊
+  backdrop-filter: saturate(1.8) blur(18px);
+  .nav-bar__nav {
+    display: flex;
+    height: 54px;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    text-decoration: none;
+  }
+  a:hover {
+    background: rgba(225, 225, 225, 0.2);
+    border-radius: 3px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  // Icon
+  .nav-bar__nav__icon {
+    font-size: 18px;
+    color: #222831;
+  }
+}
