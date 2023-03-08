@@ -1,12 +1,12 @@
 <footer class="blog-footer">
   <div class="blog-footer__copyright">
-    <% const year_now = (new Date()).getFullYear() %>
+    <% const year_this = (new Date()).getFullYear() %>
     <p>
-      &copy; <%= theme.footer.start_time !== year_now ? `${ theme.footer.start_time } - ` : '' %><%= year_now %>
+      &copy; <%= theme.footer.start_time !== year_this ? `${ theme.footer.start_time } - ` : '' %><%= year_this %>
       <%= config.author || config.title %>
     </p>
-    <!-- Respect the author's labor achievements, please do not delete -->
-    <!-- 尊重作者劳动成果，请勿删除 -->
+    <!-- Respect the author's work achievements, please do not delete the following code -->
+    <!-- 尊重作者劳动成果，请勿删除下方代码 -->
     <p>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.
       Theme <a href="https://github.com/zS1m/hexo-theme-contrails" target="_blank">Contrails</a>

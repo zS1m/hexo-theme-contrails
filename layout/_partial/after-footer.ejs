@@ -1,4 +1,10 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<%- js('js/jquery-3.6.3.min.js') %>
+<!-- Fancybox -->
+<% if (theme.fancybox) { %>
+  <%- js('fancybox/jquery.fancybox.min.js') %>
+  <%- js('js/fancybox.js') %>
+<% } %>
+
 
 <%- js('bootstrap/js/bootstrap.min.js') %>
 

@@ -39,4 +39,8 @@
 
   <!-- Custom styles -->
   <%- css(['css/blog.css', 'css/style.css']) %>
+  <!-- Fancybox -->
+  <% if (theme.fancybox){ %>
+    <%- css('fancybox/jquery.fancybox.min.css') %>
+  <% } %>
 </head>
