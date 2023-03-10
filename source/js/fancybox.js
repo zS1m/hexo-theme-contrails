@@ -7,7 +7,7 @@ $(document).ready(function () {
     }
     const $imgCaption = $(this).attr('alt');
     let $imgWrapLink = $(this).parent('a');
-    // 防止重复添加超链接
+    // 带超链接的img不使用fancybox
     if ($imgWrapLink.length < 1) {
       const src = this.getAttribute('src');
       $imgWrapLink = $(this).wrap(`<a href="${src}"></a>`).parent('a');
@@ -23,7 +23,6 @@ $(document).ready(function () {
       'zoom',
       'slideShow',
       'fullScreen',
-      'thumbs',
       'close'
     ],
     animationEffect: 'zoom-in-out'
