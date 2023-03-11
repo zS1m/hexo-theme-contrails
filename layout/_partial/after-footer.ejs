@@ -5,8 +5,11 @@
   <%- js('js/fancybox.js') %>
 <% } %>
 
-
-<%- js('bootstrap/js/bootstrap.min.js') %>
+<!-- Highlight.js -->
+<% if (theme.hljs) { %>
+  <%- js('highlightjs/highlight.min.js') %>
+  <%- js('js/highlight.js') %>
+<% } %>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <%- js('js/ie10-viewport-bug-workaround.js') %>
