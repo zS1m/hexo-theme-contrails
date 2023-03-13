@@ -203,8 +203,38 @@ body {
   }
 }
 
+/* highlight.js */
+// 代码不换行，超宽出现滚动条
 .hljs {
-  min-width:max-content;
+  min-width: max-content;
+}
+.highlight {
+  position: relative;
+}
+.hljsln {
+  margin-left: 2.2em;
+  .ln-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2.2em;
+    background: #333;
+  }
+  .ln-num {
+    position: absolute;
+    left: 0;
+    width: 2.2em;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+  }
+  .ln-num::before {
+    color: #777;
+    content: attr(data-num);
+  }
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
